@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { ThemeService } from '../services/theme.service';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(private theme:ThemeService) {}
+
+  enableDark(){
+    this.theme.enableDark();
+  }
+
+  enableLight(){
+    this.theme.enableLight();
+  }
 
 }
