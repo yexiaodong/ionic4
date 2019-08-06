@@ -6,4 +6,12 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-list>
+    <ion-item class="dynamic-item" *ngFor="let item of items" [style]="getDynamicColor(item.color)">
+      <ion-label>
+        {{item.title}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
