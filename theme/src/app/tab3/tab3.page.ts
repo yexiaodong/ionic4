@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
-
+  list = [
+    {title: '路由', router: '/router/1234'},
+    {title: '表单', router: '/form'},
+    {title: 'Http', router: ''},
+  ]
   constructor() {}
-
 }

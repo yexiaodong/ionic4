@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>form</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)">
+    <ion-item>
+      <ion-label position="floating">用户名称：</ion-label>
+      <ion-input formControlName="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">密码：</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <div class="btn-tools">
+      <ion-button type="submit">提交</ion-button>
+    </div>
+  </form>
+
+  <!-- 描述 -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>待分析</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ol>
+        <li>使用FormBuilder的表单与之前的Model的区别？</li>
+        <li>编写ionic4的Toast服务（只需ToastController）</li>
+        <li>表单验证</li>
+      </ol>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
