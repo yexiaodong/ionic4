@@ -28,25 +28,25 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab3',
+        path: 'native',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+              import('../page/native/in-app-browser/in-app-browser.module').then(m => m.InAppBrowserPageModule)
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/native',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/native',
     pathMatch: 'full'
   }
 ];

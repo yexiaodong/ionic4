@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>inAppBrowser</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+      <ion-label position="floating">url</ion-label>
+      <ion-input [(ngModel)]="url"></ion-input>
+    </ion-item>
+
+  <ion-button color="primary" (click)="openUrl()">打开外链</ion-button>
+</ion-content>
